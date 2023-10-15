@@ -1,4 +1,5 @@
 # tests/test_calculator.py
+from unittest import mock, TestCase 
 from calculator import Calculator
 import unittest 
 
@@ -29,6 +30,12 @@ class TestCalculator(unittest.TestCase):
             calc.divide(5, 0)
         
         self.assertEqual(str(context.exception), "Cannot divide by zero")
+
+    def test_operate_from_input(self): 
+        with mock.patch("builtins.input", return_value="5 + 3"):
+            with mock.patch("builtins.print") as mock_print:
+                Calculator.operate_from_input()
+                mock_print.assert_called_with(8.0)
 
 if __name__ == '__main__':
     unittest.main()
