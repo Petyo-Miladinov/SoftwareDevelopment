@@ -1,0 +1,16 @@
+(my_env) MacBooks-MacBook-Pro:SoftwareEngineering student$ flake8 calculator/calculator.py 
+calculator/calculator.py:28:49: W291 trailing whitespace
+calculator/calculator.py:38:80: E501 line too long (80 > 79 characters)
+calculator/calculator.py:43:80: E501 line too long (112 > 79 characters)
+calculator/calculator.py:46:80: E501 line too long (89 > 79 characters)
+calculator/calculator.py:48:80: E501 line too long (96 > 79 characters)
+calculator/calculator.py:53:80: E501 line too long (98 > 79 characters)
+calculator/calculator.py:69:80: E501 line too long (82 > 79 characters)
+(my_env) MacBooks-MacBook-Pro:SoftwareEngineering student$ 
+(my_env) MacBooks-MacBook-Pro:SoftwareEngineering student$ 
+(my_env) MacBooks-MacBook-Pro:SoftwareEngineering student$ flake8 test/test_calculator.py 
+test/test_calculator.py:8:1: F401 'pytest' imported but unused
+test/test_calculator.py:15:1: E402 module level import not at top of file
+test/test_calculator.py:73:80: E501 line too long (100 > 79 characters)
+test/test_calculator.py:76:41: W291 trailing whitespace
+test/test_calculator.py:84:53: W291 trailing whitespace
